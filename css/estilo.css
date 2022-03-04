@@ -1,0 +1,332 @@
+/*Selectora 
+{
+    propiedad: valor; 
+}
+*/
+
+*{
+    font-family: 'Quintessential', cursive;
+    margin:0; padding:0; border:0;   
+    color: white;
+
+}
+/*
+{
+border-style: solid;
+border-width: 1px;
+}*/
+body
+{
+    background-image: url(../assets/img/fondo.jpg);
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: 100%;
+}
+
+li 
+{
+    list-style-type:none ;
+    
+}
+
+.contenedor-padre 
+{
+	display: grid;
+	grid-template-areas:
+	"xheader"
+	"xmain"
+	"xfooter";
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
+}
+header
+{
+	grid-area: xheader;
+}
+main
+{
+	grid-area: xmain;
+}
+footer
+{
+	grid-area: xfooter;
+}
+
+
+
+/* Estilos de Header*/ 
+
+header
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul
+{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.textcenter
+{
+    text-align: center;
+}
+
+.around
+{
+    justify-content: center;
+}
+
+
+.bg-one
+{
+    background-image: linear-gradient( rgb(247, 216, 216),rgb(253, 165, 231) );
+
+}
+
+.logo
+{
+    float: left;
+}
+
+@keyframes animacionImg
+{
+    0% 
+    {
+        transform: translateY(-50px) ;
+    }
+
+    25% 
+    {
+        transform: translateX(50px) ;
+    }
+
+    50% 
+    {
+        transform: scale(2,2)
+    }
+
+    75% 
+    {
+        transform: skew(20deg, 20deg)
+    }
+
+    75% 
+    {
+        transform: translateX(0px)
+    }
+}
+
+.animacion
+{
+    animation-name: animacionImg;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 10s;
+}
+
+.positionone
+{
+    padding: 0px 0px 0px 300px;
+    height: auto;
+}
+
+a 
+{
+    color: red;
+    font-size: 25px;
+    font-weight:200;
+}
+a:hover
+{   
+    font-size: 35px;
+    color:salmon;
+}
+
+
+header nav ul .navmenu
+{
+    display: inline;
+    padding: 40px 40px 0px 0px;
+    height: 100px;
+    transition: 1s;
+}
+
+.navmenu:hover 
+{
+    height: 200px;
+}
+
+
+
+/* Estilos de Main*/
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.column
+{
+    flex-direction: column;
+}
+
+.positionright
+{
+    float: right;
+}
+
+.titulo__principal
+{
+    color:red;
+    font-size: 100px;
+    font-weight:900;
+    text-align: center;
+    background-image: url(../assets/img/bg.jpg);
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: 100%
+
+    
+
+}
+
+.titulo__secundario
+{
+    color:firebrick;
+    font-size: 80px;
+    font-weight:900;
+    text-align: left;
+    background-image: url(../assets/img/bg.jpg);
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: 100%
+
+}
+
+
+.productlist
+{
+    /*display: inline;*/
+    color:black;
+    font-size: 45px;
+    font-weight: 300;
+
+}
+
+.product
+{
+    height: 200px;
+}
+
+    /*Estilo contacto*/
+
+.form
+{
+    padding: 0px 0px 200px 100px;
+    color:black;
+    font-size: 30px;
+    font-weight: 200;
+
+}
+
+    /*Estilo preguntas*/
+
+.preguntas
+{
+    padding: 0px 0px 100px 80px;
+    color:black;
+    font-size: 20px;
+    font-weight: 150;
+
+}
+
+/*Estilo productos y sobrenosotros */
+
+.listatitulo
+{
+    padding: 0px 0px 100px 80px;
+    color:black;
+    font-size: 40px;
+    font-weight: 150;
+    flex-direction: column;
+}
+
+.sublista
+{
+    padding: 0px 0px 10px 50px;
+    color:black;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+/*Estilos de foother*/
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px 0px 0px;
+}
+
+.nav__foot ul li
+{
+   /* display: inline;*/
+    font-size: 25px;
+    font-weight:900;
+}
+
+.redes
+{
+    height: 30px;
+}
+
+/*MEDIA QUERIE MOBILE*/
+
+@media only screen and (max-width: 760px)
+{
+    .contenedor-padre 
+    {
+        display: grid;
+        grid-template-areas:
+        "xheader"
+        "xmain"
+        "xfooter";
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    header
+    {
+        grid-area: xheader;
+    }
+    main
+    {
+        grid-area: xmain;
+    }
+    footer
+    {
+        grid-area: xfooter;
+    }
+
+    body
+{
+    background-image: url(../assets/img/fondo.jpg);
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: 600%;
+}
+    
+}
+
+@media only screen and (min-width: 1024px) 
+{
+    
+}
